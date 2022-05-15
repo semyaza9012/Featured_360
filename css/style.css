@@ -829,6 +829,17 @@ header {
   height: 32px;
 }
 
+#nav-sign-in .hello-sign-all {
+  color: #fff;
+  font-weight: 500;
+  font-size: 12px;
+}
+
+#nav-sign-in .account-and-lists {
+  font-size: 15px;
+  font-style: bold;
+}
+
 #nav-search {
   position: relative;
   display: block;
