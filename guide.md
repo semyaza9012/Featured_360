@@ -396,39 +396,39 @@ Then to the `nav-main`, HTML:
 
 And the corresponding CSS:
 
-    #nav-main ul {
+    #nav-right-cluster ul {
       list-style-type: none;
       position: relative;
       padding: 0;
       margin: 18px 0 0 0;
     }
 
-    #nav-main li {
+    #nav-right-cluster li {
       display: inline-block;
       padding: 10px 9px 0 0;
     }
 
-    #nav-main a {
+    #nav-right-cluster a {
       color: #fff;
       font-size: 14px;
       font-weight: 700;
       text-decoration: none;
     }
 
-    #nav-main .nav-a {
+    #nav-right-cluster .nav-a {
       padding: 7px 10px;
       border: 1px solid transparent;
       display: inline-block;
       position: relative;
     }
 
-    #nav-main .nav-a:hover {
+    #nav-right-cluster .nav-a:hover {
       border: 1px solid #4f5965;
       border-radius: 3px;
       box-shadow: 0 1px 0 0 rgba(255,255,255,.5);
     }
 
-    #nav-main .nav-a span {
+    #nav-right-cluster .nav-a span {
       display: block;
       margin-left: -2px;
       font-weight: 300;
@@ -436,50 +436,50 @@ And the corresponding CSS:
       font-size: 12px;
     }
 
-    #nav-main i.fa-caret-down {
+    #nav-right-cluster i.fa-caret-down {
       color: #ccc;
       font-size: 11px;
       padding-left: 3px;
     }
 
-    #nav-main .nav-left {
+    #nav-right-cluster .nav-left {
       height: 55px;
     }
 
-    #nav-main .nav-left .nav-shop {
+    #nav-right-cluster .nav-left .nav-shop {
       float: left;
       width: 192px;
       padding: 4px 12px 0 15px;
     }
 
-    #nav-main .nav-left .nav-shop a {
+    #nav-right-cluster .nav-left .nav-shop a {
       margin-top: 16px;
     }
 
-    #nav-main .nav-fill a {
+    #nav-right-cluster .nav-fill a {
       font-weight: 500;
       color: #ccc;
     }
 
-    #nav-main .nav-fill a:hover {
+    #nav-right-cluster .nav-fill a:hover {
       text-decoration: underline;
     }
 
-    #nav-main .nav-right {
+    #nav-right-cluster .nav-right {
       padding-right: 6px;
     }
 
-    #nav-main .nav-right a {
+    #nav-right-cluster .nav-right a {
       margin-top: 6px;
     }
 
-    #nav-main .nav-right .cart {
+    #nav-right-cluster .nav-right .cart {
       background: transparent url(../img/cart.png) no-repeat 11px 11px;
       background-size: 39px;
       padding: 7px 20px 7px 50px;
     }
 
-    #nav-main .nav-right .cart span {
+    #nav-right-cluster .nav-right .cart span {
       color: #f08804;
       margin-left: -20px;
       font-size: 16px;
