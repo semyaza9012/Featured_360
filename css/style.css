@@ -752,7 +752,7 @@ header {
   position: relative;
   float: right;
   width: auto;
-  display: inline-block;
+  display: flex;
 }
 
 .nav-fill {
@@ -781,13 +781,16 @@ header {
   padding: 11px 18px 0 0px;
 }
 
-#nav-deliver-to .location-logo{
+#nav-deliver-to .gap-top {
+  padding-bottom: 9px;
+}
+
+#nav-deliver-to .location-logo {
   background: transparent url('../svg/location-1@2x.svg') no-repeat;
   background-size: 20px;
   position: relative;
   width: 21px;
-  height: 32px;
-  padding: 11px 0px 0 0px;                                                             /*fix position*/
+  height: 32px;                                                            /*fix position*/
 }
 
 #nav-deliver-to .deliver-to-location-txt {
@@ -814,9 +817,16 @@ header {
   font-style: bold;
 }
 
-#nav-holiday a {
-  display: block;
-  height: 100%;
+#nav-right-language .gap-top {
+  padding-bottom: 20px;
+}
+
+#nav-right-language .flag-img {
+  background: transparent url('../svg/country@2x.svg') no-repeat;
+  background-size: 45px;
+  position: relative;
+  width: 45px;
+  height: 32px;
 }
 
 #nav-search {
