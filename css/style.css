@@ -396,13 +396,16 @@ h3 {
 #bar-sub {
   background: #37475a;
   padding: 0 0 50px 0;
-  text-decoration: none;
 }
 
 #nav-main .nav-a {
   padding-left: 24px;
   padding-top: 15px;
   display: flex;
+}
+
+#nav-main .nav-a:hover {
+  text-decoration: none;
 }
 
 #nav-main .hamburger {
@@ -489,7 +492,7 @@ h3 {
 }
 
 #products {
-  padding: 0 0 60px 0;
+  padding: 0 0 1000px 0;
 }
 
 #products .col {
