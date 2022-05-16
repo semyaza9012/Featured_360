@@ -120,6 +120,12 @@ header {
   height: 32px;
 }
 
+#nav-right-language:hover {
+  border: 1px solid #4f5965;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 0 rgba(255,255,255,.5);
+}
+
 #nav-sign-in {
   padding-left: 20px;
 }
@@ -390,6 +396,96 @@ h3 {
 #bar-sub {
   background: #37475a;
   padding: 0 0 50px 0;
+  text-decoration: none;
+}
+
+#nav-main .nav-a {
+  padding-left: 24px;
+  padding-top: 15px;
+  display: flex;
+}
+
+#nav-main .hamburger {
+  background: transparent url('../svg/hamburger-1@2x.svg') no-repeat;
+  background-size: 15px;
+  position: relative;
+  width: 15px;
+  height: 32px;
+}
+
+#nav-main .hamburger-txt {
+  color: #fff;
+  font-weight: 800;
+  font-size: 15px;
+  padding-left: 5px;
+}
+
+#nav-main .txt-all-sub-bar{
+  color: #fff;
+  display: flex;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+
+#nav-main .best-sellers {
+  padding-left: 24px;
+}
+
+#nav-main .mobiles {
+  padding-left: 24px;
+}
+
+#nav-main .customer-service {
+  padding-left: 24px;
+}
+
+#nav-main .todays-deals {
+  padding-left: 24px;
+}
+
+#nav-main .fashion {
+  padding-left: 24px;
+}
+
+#nav-main .electronics {
+  padding-left: 24px;
+}
+
+#nav-main .prime {
+  padding-left: 24px;
+}
+
+#nav-main .home-and-kitchen {
+  padding-left: 24px;
+}
+
+#nav-main .new-releases {
+  padding-left: 24px;
+}
+
+#nav-main .amazon-pay {
+  padding-left: 24px;
+}
+
+#nav-main .computers {
+  padding-left: 24px;
+}
+
+#nav-main .book {
+  padding-left: 24px;
+}
+
+#nav-main .coupons {
+  padding-left: 24px;
+}
+
+#nav-main .toys-and-games {
+  padding-left: 24px;
+}
+
+#nav-main .sell {
+  padding-left: 24px;
 }
 
 #products {
