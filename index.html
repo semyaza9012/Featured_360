@@ -181,7 +181,42 @@
   </section>
 
   <section id="products">
+
+    <script src="./js/three.js"></script>
     
+    <script>
+      var scene = new THREE.Scene();
+      var camera = new THREE.PerspectiveCamera( 75, window.innerWidth/window.innerHeight, 0.01, 1000);
+
+      var renderer = new THREE.WEBGLRenderer();
+      renderer.setSize( $(products).width(), $(products).height());
+      products.appendChild(renderer.domElement);
+
+      // game logic
+      var update = function()
+      {
+
+      };
+
+      // draw scene
+      var render = function()
+      {
+        renderer.render( scene, camera);
+      };
+
+      // run game loop (update, render, repeat)
+      var GameLoop = function()
+      {
+        requestAnimationFrame( GameLoop );
+
+        update();
+        render();
+      };
+
+      GameLoop();
+      
+    </script>
+
   </section>
   <!--<section id="promo">
     <div class="container">
