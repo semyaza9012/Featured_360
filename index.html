@@ -9,11 +9,11 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css"/>
+
 </head>
 
 <body>
-  <!--<a id="banner" href="#"></a>-->
-  <!-- Main body -->
+  <script src="./js/three.min.js"></script>
 
   <header>
 
@@ -182,42 +182,12 @@
 
   <section id="products">
 
-    <script src="./js/three.js"></script>
-    
-    <script>
-      var scene = new THREE.Scene();
-      var camera = new THREE.PerspectiveCamera( 75, window.innerWidth/window.innerHeight, 0.01, 1000);
-
-      var renderer = new THREE.WEBGLRenderer();
-      renderer.setSize( $(products).width(), $(products).height());
-      products.appendChild(renderer.domElement);
-
-      // game logic
-      var update = function()
-      {
-
-      };
-
-      // draw scene
-      var render = function()
-      {
-        renderer.render( scene, camera);
-      };
-
-      // run game loop (update, render, repeat)
-      var GameLoop = function()
-      {
-        requestAnimationFrame( GameLoop );
-
-        update();
-        render();
-      };
-
-      GameLoop();
-      
-    </script>
+    <canvas class="view" width="300" height="200"></canvas>
+    <script src="./js/script.js"></script>
 
   </section>
+
+
   <!--<section id="promo">
     <div class="container">
       <div class="row">
