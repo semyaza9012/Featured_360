@@ -1,4 +1,4 @@
-//console.log(THREE)
+// import orbit control from online lib
 import {OrbitControls} from 'https://cdn.skypack.dev/@three-ts/orbit-controls';
 
 // try in lib import
@@ -45,7 +45,14 @@ camera.position.z = 3
 // adding the camera to scene
 scene.add( camera )
 
+// adding camera orvit control
 const controls = new OrbitControls( camera, canvas)
+
+// changing camera target to mesh
+controls.target = mesh.position
+
+// adding damping to movement
+controls.enableDamping = true
 
 // renderer
 const renderer = new THREE.WebGLRenderer( {
@@ -84,6 +91,9 @@ const tick = () => {
     */
 
     //camera.lookAt(mesh.position)
+
+    // update controls
+    controls.update()
 
     // render if animated
     renderer.render( scene, camera)
