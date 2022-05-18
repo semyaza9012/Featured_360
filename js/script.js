@@ -59,6 +59,9 @@ const renderer = new THREE.WebGLRenderer( {
     canvas: canvas
 } )
 
+// dealing with pixel ratio
+renderer.setPixelRatio( Math.min( window.devicePixelRatio, 2 ) )
+
 // set render size
 renderer.setSize( canvas.width, canvas.height )
 //renderer.setSize( sizes.width, sizes.height )
