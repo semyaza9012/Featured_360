@@ -1,4 +1,7 @@
 //console.log(THREE)
+import {OrbitControls} from 'https://cdn.skypack.dev/@three-ts/orbit-controls';
+
+// try in lib import
 
 // scene
 const scene = new THREE.Scene()
@@ -38,11 +41,11 @@ const camera = new THREE.PerspectiveCamera( 75, canvas.width/canvas.height, 0.01
 // camera position
 camera.position.z = 3
 
-// camera look at
-camera.lookAt( mesh.position )
 
 // adding the camera to scene
 scene.add( camera )
+
+const controls = new OrbitControls( camera, canvas)
 
 // renderer
 const renderer = new THREE.WebGLRenderer( {
@@ -74,9 +77,13 @@ const tick = () => {
 
 
     // animate the object
+    /*
     mesh.rotation.x += 0.002 * deltaTime
     mesh.rotation.y += 0.002 * deltaTime
     mesh.rotation.z += 0.002 * deltaTime
+    */
+
+    //camera.lookAt(mesh.position)
 
     // render if animated
     renderer.render( scene, camera)
