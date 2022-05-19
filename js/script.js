@@ -53,7 +53,7 @@ const textureNormalA = textureLoader.load( '/texture/texture_normal.png' )
 
 // height ( Optional )
 
-// stop mip map generation
+// stop mip map generation                                             (Do it later)
 
 
 // material
