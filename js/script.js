@@ -3,14 +3,61 @@ import {OrbitControls} from 'https://cdn.skypack.dev/@three-ts/orbit-controls';
 
 // try in lib import
 
+// loading manager
+/*
+const loadingManager = new THREE.LoadingManager()
+
+loadingManager.onStart = () => {
+    console.log('onStart')
+}
+
+loadingManager.onLoaded = () => {
+    console.log('onLoaded')
+}
+
+loadingManager.onProgress = () => {
+    console.log('onProgress')
+}
+
+loadingManager.onError = () => {
+    console.log('onError')
+}
+*/
+
 // scene
 const scene = new THREE.Scene()
 
 // cube
 const geometry = new THREE.BoxGeometry( 1, 1, 1)
 
+// textures loader
+const textureLoader = new THREE.TextureLoader()
+
+// load textures
+// diffuse
+
+const textureDiffA = textureLoader.load( '/texture/texture_diff.png' )
+const textureDiffB = textureLoader.load( '/texture/texture_diff2.png' )
+const textureDiffC = textureLoader.load( '/texture/texture_diff3.png' )
+
+// metalness
+const textureMetalA = textureLoader.load( '/texture/texture_metal.png' )
+
+// roughness
+const textureRoughA = textureLoader.load( '/texture/texture_rough.png' )
+
+// normal
+const textureNormalA = textureLoader.load( '/texture/texture_normal.png' )
+
+// alpha ( Optional )
+
+// height ( Optional )
+
+// stop mip map generation
+
+
 // material
-const material = new THREE.MeshBasicMaterial( { color: 0xff0000 } )
+const material = new THREE.MeshBasicMaterial( { map: textureDiffA } )
 
 // mesh
 const mesh = new THREE.Mesh( geometry, material )
@@ -53,6 +100,22 @@ controls.target = mesh.position
 
 // adding damping to movement
 controls.enableDamping = true
+
+// reduce manual rotation speed
+controls.rotateSpeed = 0.2
+
+// auto rotate                                               (make it stop for a certain time , make a button to stop and start auto rotation)
+var autoRotation = Boolean(true)
+
+window.addEventListener( 'click', () => {
+    if (autoRotation = true) {
+        autoRotation = false
+    }
+    else if (autoRotation = false) {
+        autoRotation = true
+    }
+} )
+controls.autoRotate = autoRotation
 
 // renderer
 const renderer = new THREE.WebGLRenderer( {
