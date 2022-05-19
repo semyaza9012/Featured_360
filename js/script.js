@@ -1,5 +1,10 @@
 // import orbit control from online lib
-import {OrbitControls} from 'https://cdn.skypack.dev/@three-ts/orbit-controls';
+import { OrbitControls } from 'https://cdn.skypack.dev/@three-ts/orbit-controls'
+
+//import {GLTFLoader} from 'https://cdn.skypack.dev/three-gltf-loader'
+//import {GLTFLoader} from './GLTFLoader.js'
+
+//console.log(GLTFLoader)
 
 // try in lib import
 
@@ -30,6 +35,7 @@ const scene = new THREE.Scene()
 // cube
 const geometry = new THREE.BoxGeometry( 1, 1, 1)
 
+/*                                                                       no need to load textures
 // textures loader
 const textureLoader = new THREE.TextureLoader()
 
@@ -55,19 +61,42 @@ const textureNormalA = textureLoader.load( '/texture/texture_normal.png' )
 
 // stop mip map generation                                             (Do it later)
 
+*/
+
+// lighting
+const ambientLight = new THREE.AmbientLight( 0xffffff, 0.5 )
+scene.add( ambientLight )
+
+const pointLight = new THREE.PointLight( 0xffffff, 1 )
+pointLight.position.x = 2
+pointLight.position.y = 1.5
+pointLight.position.z = 2
+scene.add( pointLight )
 
 // material
-const material = new THREE.MeshBasicMaterial( { map: textureDiffA } )
+const material = new THREE.MeshStandardMaterial( { 
+    /*
+    map: textureDiffA,
+    metalnessMap: textureMetalA,
+    roughnessMap: textureRoughA,
+    normalMap: textureNormalA
+    */
+} )
 
 // mesh
 const mesh = new THREE.Mesh( geometry, material )
 
+/*
 // mesh position
 mesh.position.set( 0, 0, 0 )
+*/
 
 // axes helper
 //const axesHelper = new THREE.AxesHelper()
 //scene.add(axesHelper)                             // no need now
+
+// bounding box
+//mesh.computeBoundingBox()                                                   bounding box
 
 // adding the mesh to scene
 scene.add(mesh)
