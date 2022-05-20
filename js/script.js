@@ -11,11 +11,20 @@ const scene = new THREE.Scene()
 const updateAllMaterials = () => {
     scene.traverse( ( child ) => {
 
-        if( child instanceof THREE.Mesh && child.material instanceof THREE.MeshStandardMaterial){
+        if( child.isMesh && child.material instanceof THREE.MeshStandardMaterial ){
+        //console.log(child)
+        child.computeBoundingBox()
+        console.log(child.boundingBox)
+        //child.material.envMap = environmentMap
+        //controls.target = child.position
+        }
+        /*
+        if( child instanceof THREE.Group ){
             child.material.envmap = environmentMap
             child.material.envmapIntensity = 20
-            console.log(child)
+            //child instanceof THREE.Mesh && child.material instanceof THREE.MeshStandardMaterial
         }
+        */
     })
 }
 
@@ -101,7 +110,11 @@ gltfLoader.load(
         }
         */
 
+        console.log(gltf.scene.children[0])
+        
         scene.add(gltf.scene)
+        //gltf.scene.material.envMap = environmentMap
+        //gltf.scene.children.material.envmap = environmentMap
     }
 )
 
@@ -145,6 +158,15 @@ const controls = new OrbitControls( camera, canvas)
 
 // changing camera target to mesh
 //controls.target =                                             mesh.position
+controls.enablePan = false
+
+scene.traverse( ( child ) => {
+
+    if( child.isMesh && child.material instanceof THREE.MeshStandardMaterial ){
+        console.log(child)
+        
+    }
+})
 
 // adding damping to movement
 controls.enableDamping = true
@@ -167,6 +189,8 @@ window.addEventListener( 'click', () => {
 controls.autoRotate = autoRotation
 
 controls.autoRotateSpeed = 1
+
+updateAllMaterials()
 
 // renderer
 const renderer = new THREE.WebGLRenderer( {
@@ -200,7 +224,6 @@ const tick = () => {
     time = currentTime
 
 
-
     // animate the object
     /*
     mesh.rotation.x += 0.002 * deltaTime
@@ -219,7 +242,5 @@ const tick = () => {
 
     window.requestAnimationFrame( tick )
 }
-
-updateAllMaterials()
 
 tick()
