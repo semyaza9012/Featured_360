@@ -1,6 +1,6 @@
 body {
 	margin: 0;
-	background-color: #000;
+	background-color: transparent;
 	color: #fff;
 	font-family: Monospace;
 	font-size: 13px;
@@ -88,4 +88,44 @@ a, button, input, select {
 	background-color: #f00;
 	margin-top: 20px;
 	padding: 10px;
+}
+
+#bt1 {
+	width: 50px;
+	height: 50px;
+	display: flex;
+	padding: 0;
+	border: none;
+	background: none;
+}
+
+#bt2 {
+	width: 50px;
+	height: 50px;
+	display: flex;
+	padding: 0;
+	border: none;
+	background: none;
+}
+
+#bt3 {
+	width: 50px;
+	height: 50px;
+	display: flex;
+	padding: 0;
+	border: none;
+	background: none;
+}
+
+#bt4 {
+	width: 50px;
+	height: 50px;
+	display: flex;
+	padding: 0;
+	border: none;
+	background: none;
+}
+/*
+#theView {
+	display: flex;
 }

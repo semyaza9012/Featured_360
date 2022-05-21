@@ -539,6 +539,12 @@ h3 {
   padding: 0 0 1000px 0;
 }
 
+/*
+#product .views {
+  width: 100%;
+}
+*/
+
 #products .col {
   background: rgba(19,19,4,.04);
   padding: 15px;
